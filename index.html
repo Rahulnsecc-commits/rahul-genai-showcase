@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Kumar Singh - AI/ML Portfolio</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -720,6 +721,19 @@
     </style>
 </head>
 <body>
+    <script>
+  // Handle Netlify Identity invite links like #invite_token=...
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", () => {
+      const hash = window.location.hash || "";
+      if (hash.includes("invite_token=")) {
+        // Opens the password setup / signup flow
+        window.netlifyIdentity.open("signup");
+      }
+    });
+  }
+</script>
+
     <div class="bg-animation"></div>
 
     <header>
