@@ -2,11 +2,25 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head><body>
-<script>
-if(window.netlifyIdentity){
-  window.netlifyIdentity.on("init", function(){
-    try{ if((window.location.hash||"").includes("invite_token=")){ window.netlifyIdentity.open("signup"); } }catch(e){}
-  });
-}
+  <script>
+  // Force-load identity widget and handle invite links
+  (function () {
+    function openInvite() {
+      try {
+        const hash = window.location.hash || "";
+        if (hash.includes("invite_token=")) {
+          window.netlifyIdentity.open("signup");
+        }
+      } catch (e) {}
+    }
+
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function () {
+        openInvite();
+      });
+      // Also try immediately (sometimes init already happened)
+      openInvite();
+    }
+  })();
 </script>
 </body></html>
