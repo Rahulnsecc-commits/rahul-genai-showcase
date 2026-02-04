@@ -1,0 +1,53 @@
+{
+  "projects": [
+    {
+      "id": "agentic-code-analysis",
+      "badge": "\ud83c\udfc6 HACKATHON WINNER 2025",
+      "title": "Agentic Code Analysis System",
+      "subtitle": "AutoGen / LangGraph \u2022 Debugging \u2022 RCA \u2022 Auto-remediation",
+      "overview": "Multi-agent platform for debugging, root-cause analysis, and automated remediation. Agents analyze code + logs, propose fixes, and generate artifacts (tests, docs, runbooks).",
+      "highlights": [
+        "Planner \u2192 Analyzer \u2192 Critic loop with verification before final answer",
+        "Tooling: repo search, log triage, test generation, PR-ready patches",
+        "Guardrails: policy checks, PII masking, citation grounding"
+      ],
+      "impact": "Revolutionized debugging workflows with autonomous agents; won TCS AI Hackathon 2025.",
+      "video": {
+        "type": "youtube",
+        "src": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      "diagram": "assets/diagram-placeholder.png",
+      "gallery": [
+        "assets/screenshot-placeholder.png",
+        "assets/screenshot-placeholder.png"
+      ],
+      "links": [
+        {
+          "label": "GitHub (portfolio)",
+          "url": "https://github.com/rahulnsecc/ml-projects-portfolio"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://linkedin.com/in/rahul-kumar-singh-44967456"
+        }
+      ]
+    },
+    {
+      "id": "scheduler-optimization",
+      "badge": "\ud83d\udcb0 $150M+ ROI",
+      "title": "Employee Scheduler Optimization Engine",
+      "subtitle": "Databricks ML + Gurobi \u2022 Workforce scheduling",
+      "overview": "Forecasting + optimization engine that generates compliant schedules under constraints (labor rules, demand, skills).",
+      "highlights": [
+        "Demand forecasting + constraint programming/ILP",
+        "What-if scenario runs and explainable constraints",
+        "Batch + API serving patterns for enterprise scale"
+      ],
+      "impact": "Improved scheduling accuracy by 25% and reduced labor costs by 10%, generating $150M+ ROI.",
+      "video": {
+        "type": "none"
+      },
+      "links": []
+    }
+  ]
+}
