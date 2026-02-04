@@ -5,137 +5,47 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-publish_mode: editorial_workflow
-
 collections:
   - name: "site"
     label: "Site Content"
     files:
-      - name: "site"
-        label: "Home Page (All Sections)"
-        file: "content/site.json"
+      - name: "projects"
+        label: "Projects"
+        file: "content/projects.json"
         format: "json"
         fields:
-          - label: "Theme"
-            name: "theme"
-            widget: "object"
-            fields:
-              - {label: "Accent Color", name: "accent", widget: "string"}
-          - label: "SEO"
-            name: "seo"
-            widget: "object"
-            fields:
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Keywords", name: "keywords", widget: "list"}
-          - label: "Site"
-            name: "site"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Tagline", name: "tagline", widget: "string"}
-              - label: "Primary CTA"
-                name: "cta_primary"
-                widget: "object"
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Href", name: "href", widget: "string"}
-              - label: "Secondary CTA"
-                name: "cta_secondary"
-                widget: "object"
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Href", name: "href", widget: "string"}
-              - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
-              - {label: "Location", name: "location", widget: "string", required: false}
-              - {label: "Email", name: "email", widget: "string", required: false}
-              - label: "Social Links"
-                name: "social"
-                widget: "list"
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "URL", name: "href", widget: "string"}
-          - label: "Highlights"
-            name: "highlights"
+          - label: "Projects"
+            name: "projects"
             widget: "list"
             fields:
-              - {label: "Label", name: "label", widget: "string"}
-              - {label: "Value", name: "value", widget: "string"}
-          - label: "About"
-            name: "about"
-            widget: "object"
-            fields:
-              - {label: "Section Title", name: "title", widget: "string"}
-              - {label: "Body (Markdown)", name: "body", widget: "text"}
-          - label: "Skills"
-            name: "skills"
-            widget: "object"
-            fields:
-              - {label: "Section Title", name: "title", widget: "string"}
-              - label: "Groups"
-                name: "groups"
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Overview", name: "overview", widget: "text" }
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                required: false
+                field: { label: "Bullet", name: "bullet", widget: "string" }
+              - { label: "Impact", name: "impact", widget: "text", required: false }
+              - label: "Video"
+                name: "video"
+                required: false
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["none","youtube","mp4"], default: "none" }
+                  - { label: "Source URL", name: "src", widget: "string", required: false, hint: "For YouTube use https://www.youtube.com/embed/VIDEO_ID" }
+              - { label: "Diagram Image", name: "diagram", widget: "image", required: false }
+              - label: "Gallery Images"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
+              - label: "Links"
+                name: "links"
+                required: false
                 widget: "list"
                 fields:
-                  - {label: "Group Name", name: "name", widget: "string"}
-                  - {label: "Items", name: "items", widget: "list"}
-          - label: "Experience"
-            name: "experience"
-            widget: "object"
-            fields:
-              - {label: "Section Title", name: "title", widget: "string"}
-              - label: "Roles"
-                name: "roles"
-                widget: "list"
-                fields:
-                  - {label: "Company", name: "company", widget: "string"}
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Dates", name: "dates", widget: "string", required: false}
-                  - {label: "Bullets", name: "bullets", widget: "list"}
-          - label: "Education"
-            name: "education"
-            widget: "object"
-            fields:
-              - {label: "Section Title", name: "title", widget: "string"}
-              - label: "Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Details", name: "details", widget: "string"}
-          - label: "Contact"
-            name: "contact"
-            widget: "object"
-            fields:
-              - {label: "Section Title", name: "title", widget: "string"}
-              - {label: "Body (Markdown)", name: "body", widget: "text"}
-              - {label: "Email", name: "email", widget: "string", required: false}
-
-  - name: "projects"
-    label: "Projects"
-    folder: "content/projects"
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    extension: "json"
-    format: "json"
-    fields:
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Overview", name: "overview", widget: "text", required: false}
-      - {label: "Impact", name: "impact", widget: "list", required: false}
-      - {label: "Architecture Diagram", name: "architecture_diagram", widget: "image", required: false}
-      - label: "Gallery"
-        name: "gallery"
-        widget: "list"
-        required: false
-        field: {label: "Image", name: "image", widget: "image"}
-      - {label: "Video Embed URL", name: "video_embed_url", widget: "string", required: false}
-      - label: "Links"
-        name: "links"
-        widget: "list"
-        required: false
-        fields:
-          - {label: "Label", name: "label", widget: "string"}
-          - {label: "URL", name: "href", widget: "string"}
-      - {label: "Details (Markdown)", name: "details_markdown", widget: "text", required: false}
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
