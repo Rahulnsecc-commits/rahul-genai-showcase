@@ -1,0 +1,143 @@
+{
+  "site": {
+    "title": "Rahul Singh \u2014 GenAI / AI Solution Architect",
+    "tagline": "Enterprise GenAI \u2022 RAG \u2022 Agentic Systems \u2022 NVIDIA Stack \u2022 MLOps",
+    "cta_primary": {
+      "label": "View Projects",
+      "href": "#projects"
+    },
+    "cta_secondary": {
+      "label": "Contact",
+      "href": "#contact"
+    },
+    "hero_image": "/assets/uploads/hero.png",
+    "location": "Chicago, IL",
+    "email": "amrita.nsec.c@gmail.com",
+    "phone": "",
+    "social": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/your-handle"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/your-handle"
+      },
+      {
+        "label": "Resume (PDF)",
+        "href": "/assets/uploads/resume.pdf"
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "body": "Senior AI/ML & Generative AI engineer focused on enterprise RAG, agentic workflows, and GPU-optimized deployment.\n\n- Built enterprise RAG platforms\n- Designed multi-agent verification loops\n- Implemented evaluation + guardrails\n"
+  },
+  "highlights": [
+    {
+      "label": "Years",
+      "value": "13+"
+    },
+    {
+      "label": "Platforms",
+      "value": "RAG, Agents, MLOps"
+    },
+    {
+      "label": "Impact",
+      "value": "$150M+ ROI"
+    }
+  ],
+  "skills": {
+    "title": "Core Skills",
+    "groups": [
+      {
+        "name": "GenAI",
+        "items": [
+          "LLMs",
+          "RAG",
+          "Function calling",
+          "Guardrails",
+          "Evaluation"
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "items": [
+          "LangGraph",
+          "AutoGen",
+          "LangChain",
+          "NeMo Agent Toolkit"
+        ]
+      },
+      {
+        "name": "Infra",
+        "items": [
+          "Kubernetes",
+          "Triton",
+          "TensorRT-LLM",
+          "Docker",
+          "GPU Observability"
+        ]
+      },
+      {
+        "name": "Data",
+        "items": [
+          "Vector DBs",
+          "Postgres",
+          "Redis",
+          "Kafka",
+          "Governance"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "roles": [
+      {
+        "company": "TCS (Walgreens)",
+        "title": "Senior AI/ML & GenAI Engineer",
+        "dates": "2022 \u2014 Present",
+        "bullets": [
+          "Built enterprise RAG platform with evaluation dashboards and policy guardrails.",
+          "Designed agentic workflows for incident prognosis and code analysis."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "items": [
+      {
+        "label": "Certifications",
+        "details": "AI-102, DP-600/700 (in progress), ITIL"
+      },
+      {
+        "label": "Learning",
+        "details": "Deep Learning Bootcamp (Jan 2026)"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "body": "For architecture consulting, GenAI solution design, or interview discussions \u2014 reach out.",
+    "email": "amrita.nsec.c@gmail.com"
+  },
+  "seo": {
+    "description": "Rahul Singh GenAI portfolio \u2014 RAG, Agents, NVIDIA stack, deployment, evaluation, cost optimization.",
+    "keywords": [
+      "GenAI",
+      "RAG",
+      "Agents",
+      "NVIDIA",
+      "Triton",
+      "TensorRT",
+      "NeMo",
+      "LLM",
+      "MLOps"
+    ]
+  },
+  "theme": {
+    "accent": "#6d28d9"
+  }
+}
